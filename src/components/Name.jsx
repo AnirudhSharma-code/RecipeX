@@ -25,7 +25,7 @@ function Name() {
         <Spinner/>
       ) : nameData && nameData.length > 0 ? (
         <div className="flex w-full h-full justify-center items-center flex-wrap p-10 flex-col gap-15">
-             <div className="flex justify-start items-start px-5 h-full w-full">
+             <div className="flex justify-start items-start px-2 h-full w-full">
                 <span className="border-2 border-[#452611] p-1 rounded-md" onClick={()=>navigate(-1)}><FaArrowLeftLong className="w-5" ></FaArrowLeftLong></span>
              </div>
           <div className="flex w-full h-full flex-wrap justify-center">

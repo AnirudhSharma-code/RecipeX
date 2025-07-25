@@ -12,11 +12,11 @@ function Home(){
     return(
         <div className="w-full h-full ">
             <NavBar></NavBar>
-            <div className="w-full max-h-full flex flex-row items-center justify-center h-full p-8">
+            <div className="w-full max-h-full flex flex-row items-center justify-center h-full md:p-8">
             {
             loading?<Spinner className="w-fit h-fit"/>:
             randomMeal.length==0?<span>Data not found </span>:
-            <div className="w-4/5 h-4/5 m-5 flex justify-center items-center gap-12 lg:flex-row flex-col">
+            <div className="w-4/5 h-4/5 my-3 md:m-5 flex justify-center items-center gap-12 lg:flex-row flex-col">
                 <div className="w-4/5 flex justify-center items-center"><img src={randomMeal[0].strMealThumb} alt="" className="w-4/5  rounded-lg"/></div>
                 <div className="w-4/5 flex flex-col  items-start gap-6">
                     <div className="flex flex-col justify-between items-center gap-6 w-full">
@@ -39,13 +39,13 @@ function Home(){
 
             }
             </div>
-            <div className="w-full flex justify-center m-10"><div className="w-4/5 bg-[#edad81] rounded-full h-1"></div></div>
+            <div className="w-full flex justify-center items-center md:m-10"><div className="w-4/5 bg-[#edad81] rounded-full h-1"></div></div>
             <div className="w-full h-full flex justify-center items-center">
                 {
                     loading2?<Spinner/>:
                     <div className="flex justify-center items-center p-4 flex-col">
                     <span className="text-3xl font-semibold text-[#452611]">More Recipes</span>
-                    <div className="w-full  h-full  flex justify-center items-center flex-wrap gap-10 p-10">
+                    <div className="w-full  h-full  flex justify-center items-center flex-wrap md:gap-10 gap-5 md:p-10 p-5">
                         {meal.map((recipe)=>(<Card recipe={recipe} key={recipe.idMeal}/>))}
                     </div>
                     
